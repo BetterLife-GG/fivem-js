@@ -90,21 +90,6 @@ export abstract class Game {
   }
 
   /**
-   * Get whether PvP is enabled.
-   * @returns True if enabled.
-   */
-  public static get PlayerVersusPlayer(): boolean {
-    return this.Player.PvPEnabled;
-  }
-
-  /**
-   * Set whether PvP is enabled.
-   */
-  public static set PlayerVersusPlayer(value: boolean) {
-    this.Player.PvPEnabled = value;
-  }
-
-  /**
    * Get the maximum wanted level.
    */
   public static get MaxWantedLevel(): number {
