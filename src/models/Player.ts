@@ -19,22 +19,10 @@ export class Player {
     return GetPlayerName(this.handle);
   }
 
-  public get PvPEnabled(): boolean {
-    return this.pvp;
-  }
-
-  public set PvPEnabled(value: boolean) {
-    NetworkSetFriendlyFireOption(value);
-    SetCanAttackFriendly(this.Character.Handle, value, value);
-    this.pvp = value;
-  }
-
   private handle: number;
   private ped: Ped;
-  private pvp: boolean;
 
   constructor(handle: number) {
     this.handle = handle;
-    this.PvPEnabled = true;
   }
 }
